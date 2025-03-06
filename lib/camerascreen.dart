@@ -35,7 +35,7 @@ class _CameraScreenState extends State<CameraScreen> {
   // Method to initialize the camera
   void _initializeCamera() {
     // Get the list of available cameras
-    availableCameras().then((cameras) {
+    availableCameras().then((cameras) async {
       final camera = cameras[isFrontCamera ? 1 : 0]; // Front or back camera
       _controller = CameraController(camera, ResolutionPreset.high);
 
