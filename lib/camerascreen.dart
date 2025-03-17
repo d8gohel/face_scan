@@ -74,18 +74,8 @@ class _CameraScreenState extends State<CameraScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("capture"),
-        actions: [
-          IconButton(
-            onPressed: () {
-              setState(() {
-                isFrontCamera = !isFrontCamera; // Toggle the camera direction
-              });
-              _initializeCamera(); //
-            },
-            icon: Icon(Icons.flip_camera_android_sharp),
-          ),
+      appBar: AppBar(title: Text("capture"), actions: [
+
         ],
       ),
       body: SafeArea(
