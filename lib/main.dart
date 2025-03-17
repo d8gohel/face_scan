@@ -6,11 +6,16 @@ import 'package:dio/dio.dart';
 import 'package:face_camera/camerascreen.dart';
 import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
+import 'package:flutter/services.dart';
 // import 'package:image_picker/image_picker.dart';
 // import 'package:http/http.dart' as http;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
   final cameras = await availableCameras();
   final firstCamera = cameras.first;
 
